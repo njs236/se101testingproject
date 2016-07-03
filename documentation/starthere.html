@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+//<<MODEL_VIEW>>
+
+const BLANK = "";
+const STAR = "*";
+const SPACE = "&nbsp;";
+const NEWLINE = "<BR/>"
+
+function clr () {
+    document.body.style.fontFamily = 'Courier New';
+    document.body.innerHTML = "";
+};
+
+function out ( newText ) {
+    document.body.innerHTML += newText;
+};
+
+function add ( newText ) {
+    document.body.innerHTML += "<br/>" + newText;
+};
+
+
+//<<MODEL>>
+
+
+function makeString( character, length ) {
+    var newString = BLANK;
+    for ( i = 0; i < length; i += 1 ) {
+       newString += character;
+    }
+   return newString;
+};
+
+
+function num01 ( repeats ) {
+    var i, result;
+    result = BLANK;
+    // some code goes here
+    
+    return result;
+};
+
+function num02 ( repeats ) {
+    var i, result;
+    result = BLANK;
+    // some code goes here
+    
+    return result;
+};
+
+
+function stars01 ( repeats ) {
+    var i, result;
+    result = BLANK;
+    // some code goes here
+    
+    return result;
+};
+
+
+function stars02 ( repeats ) {
+    var i, result, stars;
+    result = BLANK;
+    stars = BLANK;
+    // some code goes here
+        
+    return result;
+};
+
+
+
+
+function stars03 ( repeats ) {
+    var i, result, stars, spaces;
+    result = BLANK;
+    spaces = NEWLINE + makeString( SPACE, repeats -1 );
+    stars = STAR;
+    // some code goes here
+    
+    return result;
+};
+
+function stars04 ( repeats ) {
+    var i, result, stars, spaces;
+    result = BLANK;
+    spaces = NEWLINE + makeString( SPACE, repeats -1 );
+    stars = STAR;
+    // lots code goes here !
+    
+    return result;
+};
+
+
+//<<CONTROLLER>>
+function main ( ) {
+    const SIZE = 3;
+    clr();
+    out( num01( 7 ) );
+    out( stars01( SIZE ) );
+    out( stars02( SIZE ) );
+    out( stars03( SIZE ) );
+    out( stars04( SIZE ) );
+};
+
+window.onload = main;
+</script>
+</body>
+</html>
