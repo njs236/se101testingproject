@@ -1,35 +1,38 @@
 describe( "TASK Twenty-three: Input a series of numbers. End with a 'rogue' of 999. Output the number of positive numbers in the series. Output the number of negative numbers in the series. Output the number of zeros in the series", function() {
     describe( "Testing Positive Numbers", function() {
         it( "isPositive( 4) should equal true", function() {
-            expect( isPositive( 4 ) ).toEqual( true );
+            isPositive( 4 ).should.equal( true );
         }); 
     });
     
     describe( "Testing Zero Numbers", function() {
         it( "isZero( 4) should equal false", function() {
-            expect( isZero( 4 ) ).toEqual( false );
+            isZero( 4 ).should.equal( false );
         }); 
     });
     
     describe( "Testing Negative Numbers", function() {
         it( "isNegative( 4) should equal false", function() {
-            expect( isNegative( 4 ) ).toEqual( false );
+            isNegative( 4 ).should.equal( false );
         }); 
     });
 	
 	describe("Testing positive Numbers", function() {
 		it ("typeOfNumber([1,2,3,4,5,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			expect( typeofNumber([1,2,3,4,5,6,7,8,9,10])).toEqual([0,0,10]);
+			typeofNumber([1,2,3,4,5,6,7,8,9,10]).should.equal([0,0,10]);
+		});
+		it ("typeOfNumber([1,2,3,4,5,6,7,8,9,10]) should be an array", function () {
+			typeofNumber([1,2,3,4,5,6,7,8,9,10]).should.be.an('Array');
 		})
 	})
 	describe("Testing negative Numbers", function() {
 		it ("typeOfNumber([1,-2,3,-4,5,-6,7,-8,9,-10]) should equal [0,5, 5]", function () {
-			expect( typeofNumber([1,-2,3,-4,5,-6,7,-8,9,-10])).toEqual([0,5,5]);
+			typeofNumber([1,-2,3,-4,5,-6,7,-8,9,-10]).should.equal([0,5,5]);
 		})
 	})
 	describe("Testing zero Numbers", function() {
 		it ("typeOfNumber([0,0,0,0,0,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			expect( typeofNumber([0,0,0,0,0,6,7,8,9,10])).toEqual([5,0,5]);
+			typeofNumber([0,0,0,0,0,6,7,8,9,10]).should.equal([5,0,5]);
 		})
 	})
 });

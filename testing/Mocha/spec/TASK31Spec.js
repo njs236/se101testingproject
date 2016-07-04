@@ -2,36 +2,71 @@ describe( "TASK Thirty-One: For a group of employees, take in their name, hours,
 	var employee;
 	beforeEach(function () {
 		employee = new Employee("Bill", 40, 40);
-		employee.calculatePay()
-		employee.calculateTax()
+		employee.calculatePay();
+		employee.calculateFlatTax();
 		employee.calculateNettPay();
 	})
+	describe("there is an employee with this information loaded into the test", function () {
+		it("employee = new Employee('Bill, 40,40);", function () {
+			
+		});
+		it("employee.calculatePay();", function () {
+			
+		});
+		it("employee.calculateFlatTax();", function () {
+			
+		});
+		it("employee.calculateNettPay();", function () {
+			
+		});
+	})
     describe( "Testing Pay", function() {
-        it( "Given bill has 40 hours and $40 per hour, Pay should equal 1600", function() {
-            expect( employee.getPay() ).toEqual( 1600 );
+        it( "employee.getPay() should equal 1600", function() {
+            employee.getPay().should.equal( 1600 );
         }); 
     });
     
     describe( "Testing Tax", function() {
-        it( "Given bill has 40 hours and $40 per hour, Tax should be 400", function() {
-            expect( employee.getTax() ).toEqual( 400 );
+        it( "employee.getTax() should be 400", function() {
+            employee.getTax().should.equal( 400 );
         }); 
     });
-	describe( "Testing Net Pay", function() {
-        it( "Given bill has 40 hours and $40 per hour, NettPay should be 1200", function() {
-            expect( ( employee.getNettPay() ) ).toEqual( 1200 );
+	describe( "Testing Nett Pay", function() {
+        it( "employee.getNettPay() should be 1200", function() {
+            employee.getNettPay().should.equal( 1200 );
         }); 
     });
 	
 	describe( "Testing Employee Database", function() {
-        it( "Testing Employees, creating 4 employees", function() {
+		beforeEach(function () {
 			var employeeDB = new EmployeeDatabase();
 			employeeDB.createEmployee('Bill', 40, 40);
 			employeeDB.createEmployee('Victoria', 40, 40);
 			employeeDB.createEmployee('Andrew', 40, 40);
 			employeeDB.createEmployee('Stephanie', 40, 40);
-            expect( ( employeeDB.getMyEmployees().Length ) ).toEqual( 4 );
+		})
+		it("Employee 0 is Bill, works 40 hours and is paid $40/hour", function () {
+			employeeDB.getMyEmployees()[0].name.should.equal('Bill');
+			employeeDB.getMyEmployees()[0].hours.should.equal(40);
+			employeeDB.getMyEmployees()[0].payrate.should.equal(40);
+		})
+		it("Employee 1 is Victoria, works 40 hours and is paid $40/hour", function () {
+			employeeDB.getMyEmployees()[1].name.should.equal('Victoria');
+			employeeDB.getMyEmployees()[1].hours.should.equal(40);
+			employeeDB.getMyEmployees()[1].payrate.should.equal(40);
+		})
+		it("Employee 2 is Andrew, works 40 hours and is paid $40/hour", function () {
+			employeeDB.getMyEmployees()[2].name.should.equal('Andrew');
+			employeeDB.getMyEmployees()[2].hours.should.equal(40);
+			employeeDB.getMyEmployees()[2].payrate.should.equal(40);
+		})
+		it("Employee 3 is Stephanie, works 40 hours and is paid $40/hour", function () {
+			employeeDB.getMyEmployees()[3].name.should.equal('Stephanie');
+			employeeDB.getMyEmployees()[3].hours.should.equal(40);
+			employeeDB.getMyEmployees()[3].payrate.should.equal(40);
+		})
+        it( "should have 4 employees", function() {
+            employeeDB.getMyEmployees().Length.should.equal( 4 );
         }); 
     });
-    
 });

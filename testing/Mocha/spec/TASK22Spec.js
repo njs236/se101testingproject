@@ -2,7 +2,7 @@ describe( "TASK Twenty-two: Input a 'target' letter, followed by a series of let
 
     describe( "Test with 'eggs'", function() {
         it( "findLetter ('eggs', 'E') should equal 1", function() {
-            expect( findG( 'eggs', 'E' ) ).toEqual( 1 );
+            findLetter( 'eggs', 'E' ).should.equal( 1 );
         }); 
     });
 });

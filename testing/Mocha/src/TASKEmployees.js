@@ -11,7 +11,10 @@ class Employee {
 		return;
 	}
 
-	calculateTax() {
+	calculateFlatTax() {
+		return;
+	}
+	calculateProgressiveTax() {
 		// Ensure that the Tax is charged at 25% for first 100, and 33% after that.
 		return;
 	}
