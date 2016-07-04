@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>BCSE101 S1 2016 - Practical Test - Mocha</title>
+  <link rel="stylesheet" href="lib/mocha/mocha.css" />
+
+   <script src="lib/chai/chai.js"></script>
+  <script src="lib/mocha/mocha.js"></script>
+  
+  <script>
+  mocha.setup('bdd')
+  </script>
+  
+  
+ <!-- include source files here... -->
+ <script src="src/FarmAnimal.js"></script>
+  <script src="src/FarmWorker.js"></script>
+  <script src="src/Farm.js"></script>
+   <script src="src/Controller.js"></script>
+
+ <!-- include spec files here... -->
+    <script src="spec/ques00Spec.js"></script>
+    <script src="spec/ques01Spec.js"></script>
+	<script src="spec/ques02Spec.js"></script>
+	<script src="spec/ques03Spec.js"></script>
+	<script src="spec/ques04_05Spec.js"></script>
+	<script src="spec/ques06Spec.js"></script>
+	<script src="spec/ques07Spec.js"></script>
+	
+</head>
+<body>
+ <div id="mocha"></div>
+
+<script>
+	window.onload = mocha.run();
+	</script>
+</body> 
+</html>
+
