@@ -1,11 +1,11 @@
-describe("TASK Thirty-One: For a group of employees, take in their name, hours, and pay rate. Calculate their gross pay, tax and nett pay(tax at 25% of gross), and output them. The delimiter is 'Quit' for the name.", function() {
+describe("TASK Thirty-One: For a group of employees, take in their name, hours, and pay rate. Calculate their gross pay, tax and nett pay(tax at 25% of gross), and output them. The delimiter is 'Quit' for the name.", function () {
 	describe("there is an employee with this information loaded into the test", function () {
 		it("employee = new Employee('Bill', 40,40);", function () {});
 		it("employee.calculatePay();", function () {});
 		it("employee.calculateFlatTax();", function () {});
 		it("employee.calculateNettPay();", function () {});
 	});
-    describe("Testing Employee", function() {
+    describe("Testing Employee", function () {
 		var employee;
 		beforeEach(function () {
 			employee = new Employee("Bill", 40, 40);
@@ -16,20 +16,20 @@ describe("TASK Thirty-One: For a group of employees, take in their name, hours, 
 
 		});
 
-        it("employee.getPay() should equal 1600", function() {
+        it("employee.getPay() should equal 1600", function () {
             expect(employee.getPay()).toEqual( 1600 );
         }); 
 
-        it("employee.getTax() should be 400", function() {
+        it("employee.getTax() should be 400", function () {
             expect(employee.getTax()).toEqual( 400 );
         }); 
 		
-        it("employee.getNettPay() should be 1200", function() {
+        it("employee.getNettPay() should be 1200", function () {
             expect(employee.getNettPay()).toEqual( 1200 );
         }); 
     });
 	
-	describe("Testing Employee Database", function() {
+	describe("Testing Employee Database", function () {
 		var employeeDB;
 		beforeEach(function () {
 			employeeDB = new EmployeeDatabase();
@@ -63,7 +63,7 @@ describe("TASK Thirty-One: For a group of employees, take in their name, hours, 
 			expect(employeeDB.getMyEmployees()[3].payrate).toEqual(40);
 		});
 		
-        it("should have 4 employees", function() {
+        it("should have 4 employees", function () {
             expect(employeeDB.allMyEmployees.length).toEqual( 4 );
         }); 
     });

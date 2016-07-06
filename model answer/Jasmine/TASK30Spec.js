@@ -1,6 +1,6 @@
-describe("TASK Thirty: For each of a set of students, take in a name and mark. Output the name and mark of the best student. The delimiter is 'Quit' for the name.", function() {
-    describe("Testing Grades", function() {
-        it("outputHighestValue( [20,40,60,80,100]) should equal 100", function() {
+describe("TASK Thirty: For each of a set of students, take in a name and mark. Output the name and mark of the best student. The delimiter is 'Quit' for the name.", function () {
+    describe("Testing Grades", function () {
+        it("outputHighestValue( [20,40,60,80,100]) should equal 100", function () {
             expect( outputHighestValue( [20,40,60,80,100]) ).toEqual( 100 );
         }); 
     });
@@ -11,8 +11,8 @@ describe("TASK Thirty: For each of a set of students, take in a name and mark. O
 		})
 	})
     
-    describe("the input should be valid", function() {
-		it("should be a number", function() {
+    describe("the input should be valid", function () {
+		it("should be a number", function () {
             expect( isValidNumber('A') ).toEqual(jasmine.any(Number) );
         }); 
     });
