@@ -19,7 +19,7 @@ describe( "TASK Seven: Input two numbers. Assume they are different and output t
 	
 	describe( "Higher of -100 and A", function() {
         it( "Higher( -100, A ) should fail", function() {
-           higher( -100, 'A' ).should.fail;
+           higher( -100, 'A' );
         }); 
     });
 });

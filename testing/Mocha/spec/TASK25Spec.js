@@ -2,13 +2,13 @@ describe( "TASK Twenty-Five: Modify problem 24 above so that any positive intege
     
     describe( "product of 4 and 10", function() {
         it( "product( 4, 10 ) should be 40", function() {
-            product( 4, 10 ).should.equal( 40 );
+            calculateProduct( 4, 10 ).should.equal( 40 );
         }); 
     });
     
     describe( "Product of 4 and A", function() {
         it( "product( 4, 'A' ) should fail", function() {
-            product( 4, 'A' ).should.equal( false );
+            calculateProduct( 4, 'A' ).should.be.a('nan');
         }); 
     });
 });

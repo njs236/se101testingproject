@@ -1,7 +1,7 @@
 describe( "TASK Fourteen: Input 10 numbers between 0 and 100. Output the lowest value.", function() {
     describe( "Lowest value of 10,20,30,40,50,60,70,80,90,100 ", function() {
-        it( "Lowest( 10, 20) should equal 10", function() {
-           Lowest( 10, 20 ).should.equal( 10 );
+        it( "lower( 10, 20) should equal 10", function() {
+           lower( 10, 20 ).should.equal( 10 );
         }); 
     });
     
@@ -15,10 +15,10 @@ describe( "TASK Fourteen: Input 10 numbers between 0 and 100. Output the lowest 
 		it( "should be a number", function() {
             isValidNumber('A').should.be.an('Number');
         }); 
-		it( "outputLowest Value([10,20,30,40,50,60,70,80,90,100]) should be 10", function() {
+		it( "outputLowestValue([10,20,30,40,50,60,70,80,90,100]) should be 10", function() {
             outputLowestValue([10,20,30,40,50,60,70,80,90,100]).should.equal(10);
         }); 
-		it( "outputLowest Value([10,100,30,33,50,27,70,45,90,7]) should be 10", function() {
+		it( "outputLowestValue([10,100,30,33,50,27,70,45,90,7]) should be 7", function() {
             outputLowestValue([10,100,30,33,50,27,70,45,90,7]).should.equal(7);
         });
     });

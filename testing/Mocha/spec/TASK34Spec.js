@@ -13,13 +13,13 @@ describe ("TASK Thirty-Four: Input a series of integers ended by a value of 100.
 	
 	describe("Testing high and low values and positions", function () {
 		it("findHighestAndLowestValues([1,4,5,6,11,7, 36, 8, 99]) should be [[99, 9], [1,1]]", function () {
-			findHighestAndLowestValues( [1,4,5,6,11,7, 36, 8, 99] ).should.equal( [ [99,9], [1,1] ] );
+			findHighestAndLowestValues( [1,4,5,6,11,7, 36, 8, 99] ).should.deep.equal( [ [99,9], [1,1] ] );
 		});
 	});
 	
 	describe("Testing where it is", function () {
 		it("findValueInSeries( 99, [1,4,5,6,11,7, 36, 99, 99]) should be [8,9]", function () {
-			findValueInSeries( 99, [1,4,5,6,11,7, 36, 99, 99] ).should.equal( [8,9] );
+			findValueInSeries( 99, [1,4,5,6,11,7, 36, 99, 99] ).should.deep.equal( [8,9] );
 		});
 		it("findValueInSeries( 99, [1,4,5,6,11,7, 36, 99, 99]) should be an array", function () {
 			findValueInSeries( 99, [1,4,5,6,11,7, 36, 99, 99] ).should.be.an('Array');

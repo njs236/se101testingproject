@@ -1,13 +1,13 @@
 describe( "TASK Six: Input a currency value in $NZ and convert to $US and $AU and output the results. Do a Google search to find some currency conversion rates.", function() {
-    describe( "Convert $15NZD to $14.41AUS", function() {
-        it( "nzToAus( 15) should equal $14.41", function() {
-            expect( nzToAus( 15 ) ).toEqual( 14.41 );
+    describe( "I used a figure to calculate the exchange", function() {
+        it( "nzToAus() should equal 0.96", function() {
+            expect( nzToAus() ).toEqual( 0.96 );
         }); 
     });
     
-    describe( "Convert $15NZD to $10.76USD", function() {
-        it( "nzToUSD( 15 ) should be $10.76USD", function() {
-            expect( nzToUSD( 15 ) ).toEqual( 10.76 );
+    describe( "I used a figure to calculate the exchange", function() {
+        it( "nzToUSD() should equal 0.72", function() {
+            expect( nzToUSD() ).toEqual( 0.72 );
         }); 
     });
     
@@ -20,11 +20,14 @@ describe( "TASK Six: Input a currency value in $NZ and convert to $US and $AU an
 		afterEach(function() {
 			currency = 0;
 		});
-        it( "ConvertNZDTOAUSANDUSD( 8 ) should get $5.74USD", function() {
-            expect( currency[0] ).toEqual( 5.74 );
+        it( "ConvertNZDTOAUSANDUSD( 8 ) should return two values and the first should be a number", function() {
+            expect( currency[0] ).toEqual( jasmine.any(Number));
         }); 
-		it( "ConvertNZDTOAUSANDUSD( 8 ) should get $7.69AUS", function() {
-            expect( currency[1] ).toEqual( 7.69 );
+		it( "ConvertNZDTOAUSANDUSD( 8 ) should return two values and the second should be a number", function() {
+            expect( currency[1] ).toEqual( jasmine.any(Number) );
         });
+		it("ConvertNZDTOAUSANDUSD(8) should return an array". function () {
+			expect(currency).toEqual(jasmine.any(Array));
+		})
     });
 });

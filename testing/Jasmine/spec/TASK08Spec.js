@@ -13,7 +13,7 @@ describe( "TASK Eight: Input two numbers. If they have different values, output 
     
     describe( "Higher of 10 and 'A'", function() {
         it( "isHigher( 10, 'A' ) should fail", function() {
-            expect( isHigher( 10, 'A' ) ).toEqual( false );
+            expect( isHigher( 10, 'A' ) ).toEqual( jasmine.any(Number));
         }); 
     });
 });

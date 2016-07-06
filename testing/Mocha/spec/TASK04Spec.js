@@ -1,7 +1,7 @@
 describe( "TASK Four: Calculate the Cost of a product given the formula Cost = Quantity multiplied Unit Price and Total Cost is given by the formula Total Cost = Cost multiplied by 0.125 plus Cost. Input the Quantity and the Unit Price.", function() {
     describe( "Cost with Price of $15 and quantity of 1 million", function() {
-        it( "Cost( 1000000, 15 ) should equal 15000000", function() {
-            cost( 1000000 , 15 ).should.equal( 15000000 );
+        it( "calculateCost( 1000000, 15 ) should equal 15000000", function() {
+            calculateCost( 1000000 , 15 ).should.equal( 15000000 );
         }); 
     });
     
@@ -10,7 +10,7 @@ describe( "TASK Four: Calculate the Cost of a product given the formula Cost = Q
             totalCost( 1000000 , 15).should.equal( 16875000 );
         }); 
 		it ("Cost(1000000, 15) should equal 15000000", function() {
-			cost(1000000, 15).should.equal(15000000);
+			calculateCost(1000000, 15).should.equal(15000000);
 		});
     });
     

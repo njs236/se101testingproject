@@ -13,7 +13,7 @@ describe( "TASK Twenty-Eight: If a sentence is a series of words ended by a full
     
     describe( "Testing 'Hello Pig.'", function() {
         it( "testSentence ('Hello Pig.') should equal 8", function() {
-            testSentence( 'Hello Pig.' ).should.toEqual( 8 );
+            testSentence( 'Hello Pig.' ).should.equal( 8 );
         }); 
     });
 });

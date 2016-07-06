@@ -5,4 +5,13 @@ describe( "TASK Twenty: Input a series of letters. End with a 'rogue' of a full 
         }); 
     });
 	
+	describe("Must be a letter", function () {
+		it ("isLetter(9) should be false", function () {
+			isLetter(9).should.be.false;
+		});
+		it ("isLetter(a) should be true", function () {
+			isLetter('a').should.be.true;
+		});
+	});
+	
 });

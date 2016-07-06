@@ -12,8 +12,8 @@ describe( "TASK Twenty-Seven: Input a series of numbers. End with a “rogue” 
     });
     
     describe( "Testing 0 and 4", function() {
-        it( "isAscending( 0, -4) should equal true", function() {
-            isAscending( 0, -4 ).should.equal( false );
+        it( "isAscending( 0, -4) should equal false", function() {
+            isAscending( 0, -4 ).should.equal( false);
         }); 
     });
 	

@@ -1,13 +1,13 @@
 describe( "TASK Two: Input two numbers and output their sum and product.", function() {
     describe( "Sum of 4 and 10", function() {
-        it( "Sum( 4, 10) should equal 14", function() {
-            sum( 4, 10 ).should.equal( 14 );
+        it( "calculateSum( 4, 10) should equal 14", function() {
+            calculateSum( 4, 10 ).should.equal( 14 );
         }); 
     });
     
     describe( "Product of 4 and 10", function() {
-        it( "Product( 4, 10 ) should be 40", function() {
-            product( 4, 10 ).should.equal( 40 );
+        it( "calculateProduct( 4, 10 ) should be 40", function() {
+            calculateProduct( 4, 10 ).should.equal( 40 );
         }); 
     });
     

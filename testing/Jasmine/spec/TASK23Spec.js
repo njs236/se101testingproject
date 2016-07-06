@@ -19,17 +19,17 @@ describe( "TASK Twenty-three: Input a series of numbers. End with a 'rogue' of 9
 	
 	describe("Testing positive Numbers", function() {
 		it ("typeOfNumber([1,2,3,4,5,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			expect( typeofNumber([1,2,3,4,5,6,7,8,9,10])).toEqual([0,0,10]);
+			expect( typeOfNumber([1,2,3,4,5,6,7,8,9,10])).toEqual([0,0,10]);
 		})
 	})
 	describe("Testing negative Numbers", function() {
 		it ("typeOfNumber([1,-2,3,-4,5,-6,7,-8,9,-10]) should equal [0,5, 5]", function () {
-			expect( typeofNumber([1,-2,3,-4,5,-6,7,-8,9,-10])).toEqual([0,5,5]);
+			expect( typeOfNumber([1,-2,3,-4,5,-6,7,-8,9,-10])).toEqual([0,5,5]);
 		})
 	})
 	describe("Testing zero Numbers", function() {
 		it ("typeOfNumber([0,0,0,0,0,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			expect( typeofNumber([0,0,0,0,0,6,7,8,9,10])).toEqual([5,0,5]);
+			expect( typeOfNumber([0,0,0,0,0,6,7,8,9,10])).toEqual([5,0,5]);
 		})
 	})
 });

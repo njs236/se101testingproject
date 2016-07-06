@@ -19,20 +19,20 @@ describe( "TASK Twenty-three: Input a series of numbers. End with a 'rogue' of 9
 	
 	describe("Testing positive Numbers", function() {
 		it ("typeOfNumber([1,2,3,4,5,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			typeofNumber([1,2,3,4,5,6,7,8,9,10]).should.equal([0,0,10]);
+			typeOfNumber([1,2,3,4,5,6,7,8,9,10]).should.deep.equal([0,0,10]);
 		});
 		it ("typeOfNumber([1,2,3,4,5,6,7,8,9,10]) should be an array", function () {
-			typeofNumber([1,2,3,4,5,6,7,8,9,10]).should.be.an('Array');
+			typeOfNumber([1,2,3,4,5,6,7,8,9,10]).should.be.an('Array');
 		})
 	})
 	describe("Testing negative Numbers", function() {
 		it ("typeOfNumber([1,-2,3,-4,5,-6,7,-8,9,-10]) should equal [0,5, 5]", function () {
-			typeofNumber([1,-2,3,-4,5,-6,7,-8,9,-10]).should.equal([0,5,5]);
+			typeOfNumber([1,-2,3,-4,5,-6,7,-8,9,-10]).should.deep.equal([0,5,5]);
 		})
 	})
 	describe("Testing zero Numbers", function() {
 		it ("typeOfNumber([0,0,0,0,0,6,7,8,9,10]) should equal [0,0, 10]", function () {
-			typeofNumber([0,0,0,0,0,6,7,8,9,10]).should.equal([5,0,5]);
+			typeOfNumber([0,0,0,0,0,6,7,8,9,10]).should.deep.equal([5,0,5]);
 		})
 	})
 });

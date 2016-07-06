@@ -1,7 +1,7 @@
 describe( "TASK Thirteen: Input 10 numbers between 0 and 100. Output the highest value.", function() {
     describe( "Highest value of 10,20,30,40,50,60,70,80,90,100 ", function() {
         it( "Highest( 10, 20) should equal 20", function() {
-            expect( highest( 10, 20 ) ).toEqual( 20 );
+            expect( higher( 10, 20 ) ).toEqual( 20 );
         }); 
     });
     

@@ -13,7 +13,7 @@ describe( "TASK Twenty-Six: Input a series of integers. End with a 'rogue' of 99
     
     describe( "Testing 32 and 128", function() {
         it( "isDouble( 32, 128) should equal false", function() {
-            expect( isDouble( 32, 64 ) ).toEqual( false );
+            expect( isDouble( 32, 128 ) ).toEqual( false );
         }); 
     });
 	describe( "Testing [32,64,128,256,512]", function() {
