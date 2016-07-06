@@ -2,12 +2,12 @@ describe( "TASK Three: Calculate the area of a rectangle given the formula Area 
 	
     describe( "Area of 4 and 10", function() {
         it( "area( 4, 10) should equal 40", function() {
-            expect( area( 4, 10 ) ).toEqual( 40 );
+            expect( calculateArea( 4, 10 ) ).toEqual( 40 );
         }); 
     });
 	describe( "area of 4 and 10", function() {
         it( "product( 4, 10) should equal 40", function() {
-            expect( product( 4, 10 ) ).toEqual( 40 );
+            expect( calculateProduct( 4, 10 ) ).toEqual( 40 );
         }); 
     });
     
@@ -19,7 +19,7 @@ describe( "TASK Three: Calculate the area of a rectangle given the formula Area 
 		});
 		
         it( "rectangle( 4, 10 ) should be a Rectangle", function() {
-            expect( rectangle( 4, 10 ) ).toBe( Rectangle );
+            expect( rectangle ).toEqual( jasmine.any(Rectangle));
         }); 
 		it( "area of Rectangle should be a 40", function() {
             expect( rectangle.area() ).toEqual( 40 );
@@ -28,7 +28,7 @@ describe( "TASK Three: Calculate the area of a rectangle given the formula Area 
     
     describe( "area of 4 and A", function() {
         it( "area( 4, 'A' ) should fail", function() {
-            expect( area( 4, 'A' ) ).toThrow();
+            expect( area( 4, 'A' ) ).toEqual.(jasmine.any(Number))
         }); 
     });
 });

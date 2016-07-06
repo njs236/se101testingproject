@@ -13,7 +13,7 @@ describe( "TASK Twenty-One: Input a series of letters. End with a 'rogue' of a f
     
     describe( "Test with a 'G'", function() {
         it( "isG ('G') should be true", function() {
-            expect( isG( 'G' ) ).toEqual( false );
+            expect( isG( 'G' ) ).toEqual( true );
         }); 
     });
 	describe( "Test with a 'g'", function() {

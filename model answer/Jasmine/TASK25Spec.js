@@ -2,13 +2,13 @@ describe( "TASK Twenty-Five: Modify problem 24 above so that any positive intege
     
     describe( "product of 4 and 10", function() {
         it( "product( 4, 10 ) should be 40", function() {
-            expect( product( 4, 10 ) ).toEqual( 40 );
+            expect( calculateProduct( 4, 10 ) ).toEqual( 40 );
         }); 
     });
     
     describe( "Product of 4 and A", function() {
         it( "product( 4, 'A' ) should fail", function() {
-            expect( product( 4, 'A' ) ).toEqual( false );
+            expect( calculateProduct( 4, 'A' ) ).toEqual( jasmine.any(Number));
         }); 
     });
 });

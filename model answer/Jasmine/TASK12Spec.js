@@ -7,7 +7,7 @@ describe( "TASK Twelve: Output the integers from 20 to 25 inclusive and their su
     
     describe( "Sum of inclusive numbers of 20 to 25", function() {
         it( "sum( 20, 21 ) should equal 41", function() {
-            expect( sum( 20, 21 ) ).toEqual( 41 );
+            expect( calculateSum( 20, 21 ) ).toEqual( 41 );
         }); 
     });
     

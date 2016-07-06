@@ -74,19 +74,6 @@ describe( "TASK Thirty-Two: For a group of employees, take in their name, hours,
 		it("getTotalTax() should equal 2100", function () {
 			employeeDB.getTotalTax().should.equal(2100);
 		}) ;
-	});
-	describe("Testing Total Nett Pay", function () {
-		var employeeDB;
-		beforeEach(function () {
-			employeeDB = new EmployeeDatabase();
-			employeeDB.createEmployee('Bill', 40, 40);
-			employeeDB.createEmployee('Victoria', 40, 40);
-			employeeDB.createEmployee('Andrew', 40, 40);
-			employeeDB.createEmployee('Stephanie', 40, 40);
-			employeeDB.calculateTotalPay();
-			employeeDB.calculateTotalProgressiveTax();
-			employeeDB.calculateTotalNettPay();
-		});
 		it("getTotalNettPay() should equal 4300", function () {
 			employeeDB.getTotalNettPay().should.equal(4300);
 		}) ;
