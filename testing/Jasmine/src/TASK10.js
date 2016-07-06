@@ -1,3 +1,3 @@
-var outputNumbers = function (first, last) {
+function outputNumbers (first, last) {
 	return;
 }

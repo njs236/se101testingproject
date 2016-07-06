@@ -11,7 +11,7 @@ class Rectangle {
 	
 	area() {
 		// Area will take length and width of rectangle.
-		return
+		return;
 	}
 }
 

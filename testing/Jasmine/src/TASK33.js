@@ -26,6 +26,10 @@ class RunnerDatabase {
 		
 	}
 	
+	calculateFinishTimes() {
+		
+	}
+	
 	findRunnerByFinishTime(time) {
 		return;
 	} 

@@ -45,6 +45,23 @@ class EmployeeDatabase {
 		return;
 	}
 	
+	calculateTotalFlatTax() {
+		
+	}
+	
+	calculateTotalProgressiveTax() {
+		
+	}
+	
+	calculateTotalPay() {
+		
+	}
+	
+	calculateTotalNettPay() {
+		
+	}
+	
+	
 	getTotalTax() {
 		return;
 	}
