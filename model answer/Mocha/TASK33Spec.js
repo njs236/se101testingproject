@@ -1,21 +1,21 @@
-describe( "TASK Thirty-Three: Runners in a race receive a handicap based on their age - 20% of their age is taken off their race time. The input for each person is their identifying number, age and race time. The input is ended by a “rogue” identifier number of 999. Output the winner’s identifying number. (You can assume there will always be at least 1 person competing.)", function() {
+describe("TASK Thirty-Three: Runners in a race receive a handicap based on their age - 20% of their age is taken off their race time. The input for each person is their identifying number, age and race time. The input is ended by a “rogue” identifier number of 999. Output the winner’s identifying number. (You can assume there will always be at least 1 person competing.)", function() {
 
 	describe("there is a Runner with this information loaded into the test", function () {
 		it("runner = new Runner(1, 40, 30)", function () {});
 		it("runner.calculateFinishTime()", function () {});
 	});
-    describe( "Testing Runner", function() {
+    describe("Testing Runner", function() {
 		var runner;
 		beforeEach(function () {
 			runner = new Runner(1, 40, 30);
 			runner.calculateFinishTime();
 		});
-        it( "runner.getFinishTime() should be 22", function() {
+        it("runner.getFinishTime() should be 22", function() {
             runner.getFinishTime().should.equal( 22 );
         }); 
     });
 	
-	describe( "Testing Runner Database", function() {
+	describe("Testing Runner Database", function() {
 		var runnerDB;
 		beforeEach(function () {
 			runnerDB = new RunnerDatabase();
@@ -45,13 +45,13 @@ describe( "TASK Thirty-Three: Runners in a race receive a handicap based on thei
 			runnerDB.allMyRunners[3].age.should.equal(72);
 			runnerDB.allMyRunners[3].racetime.should.equal(33);
 		})
-        it( "should have 4 Runners", function() {
+        it("should have 4 Runners", function() {
             runnerDB.should.have.property('allMyRunners').with.length( 4 );
         }); 
-		it( "Find Runner with 12.6 as time", function() {
+		it("Find Runner with 12.6 as time", function() {
             runnerDB.findRunnerByFinishTime(12.6).should.equal( 2);
         }); 
-        it( "Winning time should be 12.6, by runner 2", function() {
+        it("Winning time should be 12.6, by runner 2", function() {
             runnerDB.findWinner().should.equal( 2);
         }); 
     });

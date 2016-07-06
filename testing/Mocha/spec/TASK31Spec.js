@@ -63,7 +63,7 @@ describe( "TASK Thirty-One: For a group of employees, take in their name, hours,
 			employeeDB.getMyEmployees()[3].payrate.should.equal(40);
 		});
 		
-        it( "should have 4 employees", function() {
+        it("should have 4 employees", function() {
             employeeDB.should.have.property('allMyEmployees').with.length( 4 );
         }); 
     });
