@@ -1,11 +1,11 @@
-describe( "TASK Thirty-Two: For a group of employees, take in their name, hours, and rate. Calculate their gross pay, tax and nett pay, and output them. Tax is at 25% on the first $100, with the remainder at 33%. The delimiter is “Quit” for the name. At the end, also output the number of employees, and the total nett pay and the total tax for the group.", function() {
+describe("TASK Thirty-Two: For a group of employees, take in their name, hours, and rate. Calculate their gross pay, tax and nett pay, and output them. Tax is at 25% on the first $100, with the remainder at 33%. The delimiter is “Quit” for the name. At the end, also output the number of employees, and the total nett pay and the total tax for the group.", function() {
 	describe("there is an employee with this information loaded into the test", function () {
 		it("employee = new Employee('Bill, 40,40);", function () {		});
 		it("employee.calculatePay();", function () {});
 		it("employee.calculateProgressiveTax();", function () {});
 		it("employee.calculateNettPay();", function () {});
 	})
-    describe( "Testing Employee", function() {
+    describe("Testing Employee", function() {
 		var employee;
 		beforeEach(function () {
 			employee = new Employee("Bill", 40, 40);
@@ -13,19 +13,19 @@ describe( "TASK Thirty-Two: For a group of employees, take in their name, hours,
 			employee.calculateProgressiveTax();
 			employee.calculateNettPay();
 		});
-        it( "employee.getPay() should equal 1600", function() {
+        it("employee.getPay() should equal 1600", function() {
             expect(employee.getPay()).toEqual( 1600 );
         }); 
     
-        it( "employee.getTax() should be 525", function() {
+        it("employee.getTax() should be 525", function() {
             expect(employee.getTax()).toEqual( 525 );
         }); 
-        it( "employee.getNettPay() should be 1075", function() {
+        it("employee.getNettPay() should be 1075", function() {
             expect(employee.getNettPay()).toEqual( 1075 );
         }); 
     });
 	
-	describe( "Testing Employee Database", function() {
+	describe("Testing Employee Database", function() {
 		var employeeDB;
 		beforeEach(function () {
 			employeeDB = new EmployeeDatabase();
@@ -54,7 +54,7 @@ describe( "TASK Thirty-Two: For a group of employees, take in their name, hours,
 			expect(employeeDB.getMyEmployees()[3].hours).toEqual(40);
 			expect(employeeDB.getMyEmployees()[3].payrate).toEqual(40);
 		})
-        it( "should have 4 employees", function() {
+        it("should have 4 employees", function() {
             expect(employeeDB.allMyEmployees.length).toEqual( 4 );
         }); 
     });
