@@ -11,6 +11,11 @@ var isZero = function (number) {
 }
 
 var typeOfNumber = function(array) {
+	/* format of result:
+	result[0] is number of zeros
+	result[1] is number of negatives
+	result[2] is number of positives
+	*/
 	var n;
 	var result = [0,0,0];
 	for (n=0; n< array.length;n++) {

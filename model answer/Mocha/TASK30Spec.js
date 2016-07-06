@@ -7,7 +7,7 @@ describe( "TASK Thirty: For each of a set of students, take in a name and mark. 
 	
 	describe ("Testing Grade Data", function () {
 		it ("computeGrades([['Bill', 55], ['Alex', 75], ['Sarah', 67], ['Natasha', 99], ['Jacob', 99]]) should return [Natasha, 99]", function () {
-			computeGrades([['Bill', 55], ['Alex', 75], ['Sarah', 67], ['Natasha', 99], ['Jacob', 99]]).should.equal(["Natasha", 99]);
+			computeGrades([['Bill', 55], ['Alex', 75], ['Sarah', 67], ['Natasha', 99], ['Jacob', 99]]).should.deep.equal(["Natasha", 99]);
 		})
 		it ("computeGrades([['Bill', 55], ['Alex', 75], ['Sarah', 67], ['Natasha', 99], ['Jacob', 99]]) should be an array", function () {
 			computeGrades([['Bill', 55], ['Alex', 75], ['Sarah', 67], ['Natasha', 99], ['Jacob', 99]]).should.be.an('Array');

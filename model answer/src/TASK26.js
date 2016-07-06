@@ -3,6 +3,7 @@ var isDouble = function (number, number2) {
 }
 
 var countDoubles = function(array) {
+	// looks for doubles in the sequence.
 	var n;
 	var count =0;
 	for (n=1; n< array.length; n++) {

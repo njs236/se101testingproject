@@ -5,5 +5,12 @@ var listSum = function (list) {
 	for (n=0; n< list.length; n++) {
 		result = calculateSum(list[n], result);
 	}
+	/*
+	var n;
+	var result = 0;
+	for (n=0; n< list.length; n++) {
+		result += list[n];
+	}
+	*/
 	return result;
 }

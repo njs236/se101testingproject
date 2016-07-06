@@ -8,5 +8,11 @@ var findG = function (string) {
 	for (n=0; n<string.length; n++) {
 		if (isG(string[n])) count++;
 	}
+	/*
+	var tempstring;
+	var regexp = /g/gi;
+	tempstring = regexp[Symbol.match](string);
+	count = tempstring.length;
+	*/
 	return count;
 }

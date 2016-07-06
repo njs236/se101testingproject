@@ -4,7 +4,7 @@ describe( "TASK Sixteen: Calculate the area of a rectangle given the formula Are
             calculateArea( 10, 4 ).should.equal( 40 );
         }); 
 		it( "calculateAreas([[10,4],[3,6], [4,8], [5,12], [6,13]]) should return [40, 18, 32, 60, 78]", function () {
-			printArray(calculateAreas([[10,4],[3,6], [4,8], [5,12], [6,13]])).should.equal('40, 18, 32, 60, 78');
+			calculateAreas([[10,4],[3,6], [4,8], [5,12], [6,13]]).should.deep.equal([40, 18, 32, 60, 78]);
 		});
 	});
 		
