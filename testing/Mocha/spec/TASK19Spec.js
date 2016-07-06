@@ -1,8 +1,8 @@
 describe("TASK Nineteen: Input two positive integers. Assume that the 2nd is bigger than the 1st and output the sum of the integers between them.", function () {
     
     describe("valid input", function () {
-		it("isValidNumber( 1 ) should equal 1", function () {
-            isValidNumber(1).should.equal( 1 );
+		it("parseNumber( 1 ) should equal 1", function () {
+            parseNumber(1).should.equal( 1 );
         }); 
         it("outputNumbers( 1, 5 ) should be an array", function () {
             outputNumbers(1,5).should.be.an('Array');

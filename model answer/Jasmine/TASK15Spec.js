@@ -17,13 +17,13 @@ describe("TASK Fifteen: Input 10 numbers between 0 and 100.Output the maximum, m
     
     describe("the input should be valid", function () {
         it("the highest number should be 100", function () {
-            expect( isValidNumber(120) ).toEqual( 100 );
+            expect( parseNumber(120) ).toEqual( false );
         }); 
 		it("the lowest number should be 0", function () {
-            expect( isValidNumber(-100) ).toEqual( 0 );
+            expect( parseNumber(-100) ).toEqual( false );
         }); 
 		it("should be a number", function () {
-            expect( isValidNumber('A') ).toEqual(jasmine.any(Number) );
+            expect( parseNumber('A') ).toEqual(false );
         }); 
     });
 });

@@ -1,4 +1,4 @@
-var isValidNumber = function(number) {
+var parseValidNumber = function(number) {
 	return;
 }
 

@@ -4,5 +4,14 @@ describe("TASK Twenty: Input a series of letters. End with a 'rogue' of a full s
             expect( countString( 'Baloo' ) ).toEqual( 5 );
         }); 
     });
+    
+    describe("Must be a letter", function () {
+		it ("parseLetter(9) should be false", function () {
+			expect(parseLetter(9)).toBe(false);
+		});
+		it ("parseLetter(a) should be true", function () {
+			expect(parseLetter('a')).toEqual('a');
+		});
+	});
 	
 });

@@ -2,6 +2,6 @@ var countString = function(string) {
 	return;
 }
 
-var isLetter = function (character) {
+var parseLetter = function (character) {
 	return;
 }

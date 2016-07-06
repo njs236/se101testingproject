@@ -15,26 +15,26 @@ describe("TASK Four: Calculate the Cost of a product given the formula Cost = Qu
     });
     
     describe("valid UnitPrice", function () {
-        it("isUnitPrice( 15 ) should be true", function () {
-            expect( isUnitPrice( 15 ) ).toEqual( true );
+        it("parseUnitPrice( 15 ) should be true", function () {
+            expect( parseUnitPrice( 15 ) ).toEqual( 15);
         }); 
     });
 	
 	describe("valid Quantity", function () {
-        it("isQuantity( 100 ) should be true", function () {
-            expect( isQuantity( 100 ) ).toEqual( true );
+        it("parseQuantity( 100 ) should be true", function () {
+            expect( parseQuantity( 100 ) ).toEqual( 100 );
         }); 
     });
 	
 	describe("invalid Quantity", function () {
-        it("isQuantity( 10.5 ) should be false", function () {
-            expect( isQuantity( 10.5 ) ).toEqual( false );
+        it("parseQuantity( 10.5 ) should be false", function () {
+            expect( parseQuantity( 10.5 ) ).toEqual( false );
         }); 
     });
 	
 	describe("invalid Price", function () {
-        it("isUnitPrice( -10 ) should be false", function () {
-            expect( isUnitPrice( -10 ) ).toEqual( false );
+        it("parseUnitPrice( -10 ) should be false", function () {
+            expect( parseUnitPrice( -10 ) ).toEqual( false );
         }); 
     });
 });

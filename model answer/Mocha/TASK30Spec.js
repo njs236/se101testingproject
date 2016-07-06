@@ -16,7 +16,7 @@ describe("TASK Thirty: For each of a set of students, take in a name and mark. O
     
     describe("the input should be valid", function () {
 		it("should be a number", function () {
-            isValidNumber('A').should.be.an('Number');
+            parseNumber('A').should.equal( false );
         }); 
     });
     

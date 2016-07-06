@@ -28,7 +28,7 @@ describe("TASK Three: Calculate the area of a rectangle given the formula Area =
     
     describe("area of 4 and A", function () {
         it("calculateArea( 4, 'A' ) should fail", function () {
-            calculateArea( 4, 'A' ).should.fail;
+            calculateArea( 4, 'A' ).should.be.a('Number');
         }); 
     });
 });

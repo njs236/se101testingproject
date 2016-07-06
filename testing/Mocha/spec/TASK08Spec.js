@@ -13,7 +13,7 @@ describe("TASK Eight: Input two numbers. If they have different values, output t
     
     describe("Higher of 10 and 'A'", function () {
         it("isHigher( 10, 'A' ) should fail", function () {
-            isHigher( 10, 'A' ).to.be.null;
+            isHigher( 10, 'A' ).should.be.a('Number');
         }); 
     });
 });

@@ -1,11 +1,7 @@
-var nzToAus = function(amount) {
-	return;
+var convert = function (amount, currencyFrom, currencyTo) {
+    return;
 }
 
-var nzToUSD = function (amount) {
-	return;
-}
-
-var convertNZDToAUSandUSD = function (amount) {
+var changeNZDToAUSandUSD = function (amount) {
 	return;
 }

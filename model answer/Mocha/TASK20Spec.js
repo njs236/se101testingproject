@@ -6,11 +6,11 @@ describe("TASK Twenty: Input a series of letters. End with a 'rogue' of a full s
     });
 	
 	describe("Must be a letter", function () {
-		it ("isLetter(9) should be false", function () {
-			isLetter(9).should.be.false;
+		it ("parseLetter(9) should be false", function () {
+			parseLetter(9).should.be.false;
 		});
-		it ("isLetter(a) should be true", function () {
-			isLetter('a').should.be.true;
+		it ("parseLetter(a) should be true", function () {
+			parseLetter('a').should.equal('a');
 		});
 	});
 	

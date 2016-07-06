@@ -8,7 +8,7 @@ describe("TASK Twenty-Four: Produce the 2 times table (to 5 x 2) in the form 1 x
     
     describe("Product of 4 and A", function () {
         it( "product( 4, 'A' ) should fail", function () {
-            calculateProduct( 4, 'A' ).should.fail;
+            calculateProduct( 4, 'A' ).should.be.a('Number');
         }); 
     });
 });

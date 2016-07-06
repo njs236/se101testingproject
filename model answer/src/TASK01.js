@@ -1,4 +1,6 @@
 var calculateSum = function (number1, number2) {
+    if (isNaN(number1)) return ;
+    if (isNaN(number2)) return ;
 	return number1 + number2;
 }
 

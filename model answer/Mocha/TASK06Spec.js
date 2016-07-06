@@ -1,6 +1,6 @@
 describe("TASK Six: Input a currency value in $NZ and convert to $US and $AU and output the results. Do a Google search to find some currency conversion rates.", function () {
     describe("uses a ratio for Aus", function () {
-        it("I used a ratio of 0.96)", function () {
+        it("I used a ratio of 0.96", function () {
         }); 
     });
     
@@ -12,7 +12,7 @@ describe("TASK Six: Input a currency value in $NZ and convert to $US and $AU and
     describe("Returns an array", function () {
 		var currency = 0;
 		beforeEach(function () {
-			currency = convertNZDToAUSandUSD(8);
+			currency = changeNZDtoAUSandUSD(8);
 		});
 		
 		afterEach(function () {

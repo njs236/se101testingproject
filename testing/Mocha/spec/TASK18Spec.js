@@ -32,7 +32,7 @@ describe("TASK Eighteen: Input a series of numbers. End with a 'rogue' of 999.Ou
     
     describe("the input should be valid", function () {
 		it("should be a number", function () {
-            isValidNumber('A').should.be.a('Number');
+            parseNumber('A').should.equal( false );
         }); 
     });
 });

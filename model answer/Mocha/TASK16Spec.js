@@ -11,7 +11,7 @@ describe("TASK Sixteen: Calculate the area of a rectangle given the formula Area
 
     describe("the input should be valid", function () {
 		it("should be a number", function () {
-            isValidNumber('A').should.be.a('Number');
+            parseNumber('A').should.equal( false );
         }); 
     });
 });

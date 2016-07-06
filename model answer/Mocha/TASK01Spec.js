@@ -13,7 +13,7 @@ describe("TASK One: Output the sum and product of 4 and 10.", function () {
     
     describe("Sum of 4 and A", function () {
         it("Sum( 4, 'A' ) should fail", function () {
-            calculateSum( 4, 'A' ).should.not.pass;
+            calculateSum( 4, 'A' ).should.be.a('Number');
         }); 
     });
 });

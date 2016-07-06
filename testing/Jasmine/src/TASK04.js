@@ -7,10 +7,10 @@ var totalCost = function(price,quantity) {
 	return
 }
 
-var isQuantity = function(quantity) {
+var parseQuantity = function(quantity) {
 	return;
 }
 
-var isUnitPrice = function(price) {
+var parseUnitPrice = function(price) {
 	return;
 }

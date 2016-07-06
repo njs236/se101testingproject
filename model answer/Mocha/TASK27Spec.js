@@ -25,7 +25,7 @@ describe("TASK Twenty-Seven: Input a series of numbers. End with a “rogue” o
 	
 	describe("the input should be valid", function () {
 		it("should be a number", function () {
-            isValidNumber('A').should.be.a('Number');
+            parseNumber('A').should.equal( false );
         }); 
     });
 });

@@ -17,7 +17,7 @@ describe("TASK Eighteen: Input a series of numbers. End with a 'rogue' of 999.Ou
     
     describe("the input should be valid", function () {
 		it("should be a number", function () {
-            expect( isValidNumber('A') ).toEqual(jasmine.any(Number) );
+            expect( parseNumber('A') ).toEqual(false );
         }); 
     });
 });

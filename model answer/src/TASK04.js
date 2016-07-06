@@ -9,16 +9,16 @@ var totalCost = function(price,quantity) {
 	return totalCost;
 }
 
-var isQuantity = function(quantity) {
+var parseQuantity = function(quantity) {
 	if (quantity != Math.round(quantity)) {
         return false;
     }
-	return true;
+	return quantity;
 }
 
-var isUnitPrice = function(price) {
+var parseUnitPrice = function(price) {
 	if (price < 0) {
        return false; 
     }
-	return true;
+	return price;
 }

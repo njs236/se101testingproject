@@ -1,7 +1,7 @@
-var isValidNumber = function(number) {
-	if (number > 100) return 100;
-	if (number < 0) return 0;
-	if (isNaN(number)) return 0;
+var parseNumber = function(number) {
+	if (number > 100) return false;
+	if (number < 0) return false;
+	if (isNaN(number)) return false;
 	return number;
 }
 

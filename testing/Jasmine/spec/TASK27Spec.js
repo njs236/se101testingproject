@@ -25,7 +25,7 @@ describe("TASK Twenty-Seven: Input a series of numbers. End with a “rogue” o
 	
 	describe("the input should be valid", function () {
 		it("should be a number", function () {
-            expect( isValidNumber('A') ).toEqual(jasmine.any(Number) );
+            expect( parseNumber('A') ).toEqual(false );
         }); 
     });
 });
