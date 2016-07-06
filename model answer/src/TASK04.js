@@ -10,11 +10,15 @@ var totalCost = function(price,quantity) {
 }
 
 var isQuantity = function(quantity) {
-	if (quantity != Math.round(quantity)) return false;
+	if (quantity != Math.round(quantity)) {
+        return false;
+    }
 	return true;
 }
 
 var isUnitPrice = function(price) {
-	if (price < 0) return false;
+	if (price < 0) {
+       return false; 
+    }
 	return true;
 }

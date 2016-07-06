@@ -7,7 +7,7 @@ var lower = function (number1, number2) {
 var outputLowestValue = function (array) {
 		var n;
 	lowest = array[0];
-	for (n = 1; n <= array.length; n++) {
+	for (n = 1; n <= array.length; n+=1) {
 		// each match up compares numbers. the function determines what will the outcome be.
 		var compareNumbers = lower(array[n], array[n-1]);
 		// check to see if current match has a lower number than the first position.

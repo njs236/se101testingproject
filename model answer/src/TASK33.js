@@ -32,15 +32,17 @@ class RunnerDatabase {
 	
 	calculateFinishTimes() {
 		var n;
-		for (n=0; n< this.allMyRunners.length; n++) {
+		for (n=0; n< this.allMyRunners.length; n+=1) {
 			this.allMyRunners[n].calculateFinishTime();
 		}
 	}
 	
 	findRunnerByFinishTime(time) {
 		var n;
-		for (n=0; n < this.allMyRunners.length; n++) {
-			if (this.allMyRunners[n].getFinishTime() == time) return this.allMyRunners[n].getNumber();
+		for (n=0; n < this.allMyRunners.length; n+=1) {
+			if (this.allMyRunners[n].getFinishTime() == time) {
+                return this.allMyRunners[n].getNumber();
+            }
 		}
 		return;
 	} 
@@ -48,7 +50,7 @@ class RunnerDatabase {
 	findWinner() {
 		var n;
 		var tempArray = []
-		for (n=0; n<this.allMyRunners.length; n++) {
+		for (n=0; n<this.allMyRunners.length; n+=1) {
 			tempArray.push(this.allMyRunners[n].getFinishTime())
 		}
 		var quickesttime = outputLowestValue(tempArray);

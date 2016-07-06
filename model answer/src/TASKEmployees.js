@@ -53,28 +53,28 @@ class EmployeeDatabase {
 	}
 	calculateTotalFlatTax() {
 		var n;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			this.allMyEmployees[n].calculateFlatTax();
 		}
 	}
 	
 	calculateTotalProgressiveTax() {
 		var n;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			this.allMyEmployees[n].calculateProgressiveTax();
 		}
 	}
 	
 	calculateTotalPay() {
 		var n;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			this.allMyEmployees[n].calculatePay();
 		}
 	}
 		
 	calculateTotalNettPay() {
 		var n;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			this.allMyEmployees[n].calculateNettPay();
 		}
 	}
@@ -82,7 +82,7 @@ class EmployeeDatabase {
 	getTotalTax() {
 		var n;
 		var tax = 0;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			tax += this.allMyEmployees[n].getTax();
 		}
 		return tax;
@@ -91,7 +91,7 @@ class EmployeeDatabase {
 	getTotalNettPay() {
 		var n;
 		var nettpay = 0;
-		for (n=0; n<this.allMyEmployees.length; n++) {
+		for (n=0; n<this.allMyEmployees.length; n+=1) {
 			nettpay += this.allMyEmployees[n].getNettPay();
 		}
 		return nettpay;

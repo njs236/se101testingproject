@@ -4,7 +4,9 @@ var outputEvenNumbers = function (first, last) {
 		//assumes that first is less than last.
 	if (first > last) return result;
 	while (n <= last) {
-		if (isEven(n)) result.push(n);
+		if (isEven(n)) {
+          result.push(n);  
+        }
 		n++;
 	}
 	return result;

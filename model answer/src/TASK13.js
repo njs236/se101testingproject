@@ -8,7 +8,7 @@ var isValidNumber = function(number) {
 var outputHighestValue= function(array) {
 	var n;
 	highest = array[0];
-	for (n = 1; n < array.length; n++) {
+	for (n = 1; n < array.length; n+=1) {
 		// each match up compares numbers. the function determines the outcome of it.
 		var compareNumbers = higher(array[n], array[n-1]);
 		// check to see if current match has a higher number than the first position.

@@ -19,9 +19,15 @@ var typeOfNumber = function(array) {
 	var n;
 	var result = [0,0,0];
 	for (n=0; n< array.length;n++) {
-		if (isPositive(array[n])) result[2]++;
-		if (isNegative(array[n])) result[1]++;
-		if (isZero(array[n])) result[0]++;
+		if (isPositive(array[n])) {
+            result[2]+=1;
+        }
+		if (isNegative(array[n])) {
+            result[1]+=1;
+        }
+		if (isZero(array[n])) {
+            result[0]+=1;
+        }
 	}
 	return result;
 }

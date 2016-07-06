@@ -5,8 +5,10 @@ var isG = function (char) {
 var findG = function (string) {
 	var n;
 	var count = 0;
-	for (n=0; n<string.length; n++) {
-		if (isG(string[n])) count++;
+	for (n=0; n<string.length; n+=1) {
+		if (isG(string[n])) {
+            count+=1;
+        }
 	}
 	/*
 	var tempstring;

@@ -2,7 +2,7 @@ var threeHigher = function (number1, number2, number3) {
 	var args = Array.prototype.slice.call(arguments);
 	var n;
 	var highest;
-	for (n= 1; n< args.length; n++) {
+	for (n= 1; n< args.length; +=1) {
 		var compareValue = higher(args[n], args[n-1]);
 		if ( compareValue == null) {
 			highest = args[n];

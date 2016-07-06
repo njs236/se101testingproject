@@ -7,7 +7,7 @@ var testAscendingSequence =function (array) {
 	// has to be able to give a tested condition for the sequence, but if it doesn't meet it, must break.
 	var n;
 	var is = false;
-	for (n=1; n<array.length; n++) {
+	for (n=1; n<array.length; n+=1) {
 		if (isAscending(array[n-1], array[n])) {
 			is = true;
 		}

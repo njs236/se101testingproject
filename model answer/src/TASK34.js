@@ -2,8 +2,10 @@ var findValueInSeries = function(value, series) {
 	// must be able to return more than one value.
 	var result = [];
 	var n;
-	for (n=0; n<series.length; n++) {
-		if (series[n] == value ) result.push(n+1);
+	for (n=0; n<series.length; n+=1) {
+		if (series[n] == value ) {
+            result.push(n+1);
+        }
 	}
 	return result;
 }
