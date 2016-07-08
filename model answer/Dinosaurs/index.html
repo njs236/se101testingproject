@@ -10,8 +10,9 @@
 <script src="scripts/controller.js"></script>
 <script>
 //<<MODEL_VIEW>>
-
-var controller = new Controller(new View(), new World("What makes this Dinosaur unique?"));
+var view = new View();
+var controller = new Controller(view, new World("What makes this Dinosaur unique?"));
+view.setController(controller);
 window.onload = controller.start();
 </script>
 </body>

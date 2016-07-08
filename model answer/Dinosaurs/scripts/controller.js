@@ -2,6 +2,7 @@ class Controller {
     constructor(view, world) {
         this.myView = view;
         this.myWorld = world;
+		this.answer = "";
     } 
     
     start() {
@@ -28,6 +29,26 @@ class Controller {
 		
         
 		this.myView.out(this.myWorld.getSpeciesByFamily());
+		this.startQuestion(this, family.allMySpecies[0])
+
+		
         
     }
+	
+	startQuestion(self, answer) {
+		self.answer = answer.name.toUpperCase();
+		self.myView.in(self.myWorld.question + " that has " + answer.answer);
+	}
+	
+	myQuestion (view, mydino) {
+		controller = view.myController;
+		console.log("here");
+		console.log(mydino.toUpperCase());
+		console.log(controller.answer)
+		if (mydino.toUpperCase() == controller.answer) {
+			this.myView.out("Correct!");
+			controller.startQuestion(controller, controller.myWorld.findFamily("Sauropod").allMySpecies[0]);
+			
+		}
+	}
 }
