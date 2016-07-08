@@ -18,6 +18,8 @@ class World {
     }
     
     getMonarchs() {
+		
+		// write a sort method that returns the Monarchs from top to bottom based on their likelihood of survival property. 
         this.allMyMonarchs.sort(function (a,b) {
             if (a.likelihoodOfSurvival > b.likelihoodOfSurvival) {
                 return -1;

@@ -17,11 +17,11 @@ class Controller {
         var monarch = this.myWorld.findMonarch(1);
         monarch.addFiefdom(1, "Princess of Zot", 3000, 1000000, false);
         var monarch = this.myWorld.findMonarch(2);
-        monarch.addFiefdom(1, "Princess of Zot", 3000, 1000000, false);
+        monarch.addFiefdom(1, "Princess of Zot", 2000, 1050000, false);
         var monarch = this.myWorld.findMonarch(3);
-        monarch.addFiefdom(1, "Princess of Zot", 3000, 1000000, false);
+        monarch.addFiefdom(1, "Princess of Zot", 750, 500000, false);
         var monarch = this.myWorld.findMonarch(4);
-        monarch.addFiefdom(1, "Princess of Zot", 3000, 1000000, false);
+        monarch.addFiefdom(1, "Princess of Zot", 3400, 2250000, false);
         
         this.myView.out(this.myWorld.getMonarchsAndFiefdoms());
     }

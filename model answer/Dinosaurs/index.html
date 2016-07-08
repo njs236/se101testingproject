@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script src="scripts/view.js"></script>
+<script src="scripts/species.js"></script>
+<script src="scripts/family.js"></script>
+<script src="scripts/world.js"></script>
+<script src="scripts/controller.js"></script>
+<script>
+//<<MODEL_VIEW>>
+
+var controller = new Controller(new View(), new World("What makes this Dinosaur unique?"));
+window.onload = controller.start();
+</script>
+</body>
+</html>
