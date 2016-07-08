@@ -1,9 +1,9 @@
 class Monarch {
     constructor(id, ruler, marriedTo) {
-        this.id = id;
-        this.ruler = ruler;
-        this.marriedTo = marriedTo;
-        if (marriedTo != "") {
+		this.id = id;
+		this.ruler = ruler;
+		this.marriedTo = marriedTo;
+		if (marriedTo != "") {
             this.married = true;
         }
         this.determineSurvival();
@@ -21,13 +21,11 @@ class Monarch {
     }
     
     determineSurvival() {
-        this.likelihoodOfSurvival = false;
+        this.likelihoodOfSurvival = 0;
         if (this.married) {
-            this.likelihoodOfSurvival = true;
+            this.likelihoodOfSurvival = 100;
         } else {
-            if (Math.round(Math.pow(Math.random(), 2)) == 1) {
-                this.likelihoodOfSurvival = true;
-            }
+            this.likelihoodOfSurvival = Math.round(100 * Math.random());
         }
     }
     
@@ -36,7 +34,7 @@ class Monarch {
         var result = "<p><em>Fiefdoms</em><br/></p>";
         result += "<p>";
         for (n=0; n<this.allMyFiefdoms.length; n+=1) {
-            result += "     " + this.allMyFiefdoms[n].id + "      " + this.allMyFiefdoms[n].lord + "<br/>";
+            result += "    " + this.allMyFiefdoms[n].id + "    " + this.allMyFiefdoms[n].lord + "<br/>";
         }
         result += "</p>";
         return result;
