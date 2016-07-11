@@ -3,8 +3,8 @@ class World {
         this.allMyMonarchs = [];
     }
     
-    addMonarch (id, ruler, marriedTo) {
-        var monarch = new Monarch(id, ruler, marriedTo);
+    addMonarch (id, ruler, marriedOn) {
+        var monarch = new Monarch(id, ruler, marriedOn);
         this.allMyMonarchs.push(monarch);
     }
     

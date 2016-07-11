@@ -1,21 +1,16 @@
 class Family {
-    constructor(id, name, feature, answer, world) {
+    constructor(id, name, feature, size) {
 		this.id = id;
 		this.name = name;
 		this.feature = feature;
-		this.answer = answer;
-		this.myWorld = world;
+		this.size = size;
         this.allMySpecies = [];
         
     }
-	
-	question() {
-		return this.myWorld.question;
-	}
-    
-    addSpecies(id, name, eats, answer, size, weight, family, world) {
+	   
+    addSpecies(id, name, size, weight, family) {
 		// pass the function 
-        var species = new Species(id, name, eats, answer, size, weight, family, world)
+        var species = new Species(id, name, size, weight, family)
         this.allMySpecies.push(species);
     }
     
@@ -42,17 +37,13 @@ class Family {
 			result += "\t";
 			result += this.allMySpecies[n].name;
 			var tabs;
-			if (this.allMySpecies[n].name == "Tyrannosaurus Rex") {
-				console.log(longest/16);
-			}
-			
 			for (tabs = 0 ; tabs < Math.round(((longest-this.allMySpecies[n].name.length)/4)); tabs+=1){
 				
 				result += "\t";
 			}
-			result += this.allMySpecies[n].eats;
+			result += this.allMySpecies[n].size;
 			result += "\t";
-			result += this.allMySpecies[n].answer;
+			result += this.allMySpecies[n].weight;
 			result += "\n";
         }
         result += "</p>";

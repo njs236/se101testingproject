@@ -11,16 +11,7 @@ class Monarch {
         this.allMyFiefdoms = [];
         
     }
-    
-    addFiefdom(id, lord, numbersOfProperties, yearlyRevenue, doesTax) {
-		// pass the function 
-        var fiefdom = new Fiefdom(id, lord, numbersOfProperties, yearlyRevenue, doesTax)
-        this.allMyFiefdoms.push(fiefdom);
-    }
-    
-    hasFiefdom () {
-        return this.allMyFiefdoms.length > 0;
-    }
+
     
     determineSurvival() {
 		// store the likelihood of survival in the object.
@@ -33,15 +24,5 @@ class Monarch {
             this.likelihoodOfSurvival = Math.round(100 * Math.random());
         }
     }
-    
-    getFiefdoms() {
-        var n;
-        var result = "<p><em>Fiefdoms</em><br/></p>";
-        result += "<p>";
-        for (n=0; n<this.allMyFiefdoms.length; n+=1) {
-            result += "    " + this.allMyFiefdoms[n].id + "    " + this.allMyFiefdoms[n].lord + "<br/>";
-        }
-        result += "</p>";
-        return result;
-    }
+
 }

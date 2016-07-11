@@ -7,9 +7,9 @@ class Controller {
     start() {
         // making monarchs;
         this.myWorld.addMonarch(1, "Duke of Tosa", "");
-        this.myWorld.addMonarch(2, "Queen of Zot", "King of Zot");
-        this.myWorld.addMonarch(3, "Prince of Tellah", "Princess of Zot");
-        this.myWorld.addMonarch(4, "King of Eithennis", "Queen of Emer");
+        this.myWorld.addMonarch(2, "Queen of Zot", "01/28/6350");
+        this.myWorld.addMonarch(3, "Prince of Tellah", "06/12/6320");
+        this.myWorld.addMonarch(4, "King of Eithennis", "14/15/6321");
         
         this.myView.out(this.myWorld.getMonarchs());
         
