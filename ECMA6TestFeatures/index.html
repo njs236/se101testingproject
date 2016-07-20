@@ -1,0 +1,128 @@
+<!--
+ECMA6 test of the Toybox example.
+You no longer need ; at the end to evaluate lines you can have it if you want.
+I found an interesting set of variable comparisons that would be useful for mathematical functions like fib, trib and reversing arrays without the function.
+also the same syntax can be used with objects. 
+classes are defined by the class keyword. you no longer need the var Class = function() syntax. 
+the constructor method in the class instantiates the class.
+functions of prototype no longer need Class.prototype. you can state them like you would in other languages.
+you can use (a,b) => for evaluating functions. 
+the let key word lets you handle block scope. if var is used, it will still replace block scope with function scope.
+let can be used in a block (e.g a for loop) so that outside the block it will be different. 
+strings can be concatenated using `` terminology. declaring variables in `` is found by using ${}.
+Functions that handle objects and arrays can be handled intuitively. I thought this might be useful for how the toybox receives the data from toys. 
+you could make a function that has conditions based on the type of toy, for example. 
+
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<script>
+//<<MODEL_VIEW>>
+const BLANK = ""
+const SPACE = "&nbsp;"
+const TAB = SPACE.repeat(4)
+const NEWLINE = "<br>"
+class View {
+	constructor() {
+	}
+clr() {
+    "use strict";
+    document.body.style.fontFamily = 'Courier New'
+    document.body.innerHTML = ""
+}
+
+out(newText) {
+    "use strict";
+    document.body.innerHTML += newText
+}
+
+add(newText) {
+    "use strict";
+    document.body.innerHTML += `<br> ${newText}`
+}
+}
+
+
+//<<MODEL>>
+class Toy {
+	constructor( newName, newColour, newCost ){
+    "use strict"
+    this.name = newName || 'unnamed'
+    this.colour = newColour || 'white'
+    this.cost = newCost || 0.0
+}
+
+toString() {
+    "use strict"
+    let result = this.name + " (" + this.colour + ') @ $' +  this.cost.toFixed(2)
+    return result
+}
+}
+class Toybox {
+	constructor () {
+    "use strict"
+    this.toyCount = 0
+    this.allMyToys = [] 
+}
+
+addToy ( newName, newColour, newCost ) {
+    "use strict";
+    let newToy = new Toy( newName, newColour, newCost )
+    this.allMyToys.push( newToy )
+    this.toyCount += 1
+}
+
+sortToys(){
+    "use strict";
+    this.allMyToys.sort((a, b) =>{
+        if (a.name < b.name) {
+            return -1
+        }
+        if (a.name > b.name) {
+            return 1
+        } // a must be equal to b
+        return 0
+    })
+}
+
+toString() {
+    "use strict";
+    var result, aToy
+    this.sortToys()
+    result = `This toybox has  ${this.toyCount} toys: ${NEWLINE}`
+    for (aToy of this.allMyToys) {
+        result += `${TAB}${aToy.toString()}${NEWLINE}`
+    }
+    return result
+};
+}
+
+
+//<<CONTROLLER>>
+function main() {
+    "use strict";
+    var toybox
+	var view = new View()
+    toybox = new Toybox()
+    toybox.addToy( "Teddy", "Brown", 12.34 )
+    toybox.addToy( "Dolly", "Pink", 21.43 )
+    toybox.addToy( "Bat", "Wooden", 34.56 )
+    view.clr()
+    view.out(toybox.toString())
+};
+
+window.onload = main
+</script>
+</body>
+</html>
